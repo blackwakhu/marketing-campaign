@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{{url_for('static', filename='style.css')}}" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    
+</head>
+<body>
+    <div>
+        <h1>marketing</h1>
+        <form action="/predict" method="post">
+            <label for="Education">Education</label>
+            <input type="radio" name="Education" id="" value="0">2n cycle
+            <input type="radio" name="Education" id="" value="1">basic
+            <input type="radio" name="Education" id="" value="2">graduation
+            <input type="radio" name="Education" id="" value="3">master
+            <input type="radio" name="Education" id="" value="4">PHD<br>
+            <label for="Income">income</label>
+            <input type="number" name="Income" id="input_num" placeholder="Income" min="0"><br>
+            <label for="Kidhome">home with kids</label>
+            <input type="number" name="Kidhome" id="input_num" placeholder="home with kids" min="0"><br>
+            <label for="Teenhome">home with teen</label>
+            <input type="number" name="Teenhome" id="input_num" placeholder="home with teens" min="0"><br>
+            <label for="Recency">Recency</label>
+            <input type="number" name="Recency" id="input_num" placeholder="Recency" min="0"><br>
+            <label for="MntWines">MntWines</label>
+            <input type="number" name="MntWines" id="input_num" placeholder="MntWines" min="0"><br>
+            <label for="MntFruits">MntFruits</label>
+            <input type="number" name="MntFruits" id="input_num" placeholder="MntFruits" min="0"><br>
+            <label for="MntMeatProducts">MntMeatProducts</label>
+            <input type="number" name="MntMeatProducts" id="input_num" placeholder="MntMeatProducts" min="0"><br>
+            <label for="MntFishProducts">MntFishProducts</label>
+            <input type="number" name="MntFishProducts" id="input_num" placeholder="MntFishProducts" min="0"><br>
+            <label for="MntSweetProducts">MntSweetProducts</label>
+            <input type="number" name="MntSweetProducts" id="input_num" placeholder="MntSweetProducts" min="0"><br>
+            <label for="MntGoldProds">MntGoldProds</label>
+            <input type="number" name="MntGoldProds" id="input_num" placeholder="Mntgoldprods" min="0"><br>
+            <label for="NumWebPurchases">No. web purchases</label>
+            <input type="number" name="NumWebPurchases" id="input_num" placeholder="No. web purchases" min="0"><br>
+            <label for="NumCatalogPurchases">No. catalog purchases</label>
+            <input type="number" name="NumCatalogPurchases" id="input_num" placeholder="No. catalog purchases" min="0"><br>
+            <label for="AcceptedCmp3">AcceptedCmp3</label>
+            <input type="radio" name="AcceptedCmp3" id="" value="1">positive
+            <input type="radio" name="AcceptedCmp3" id="" value="0">negative<br>
+            <label for="AcceptedCmp4">AcceptedCmp4</label>
+            <input type="radio" name="AcceptedCmp4" id="" value="1">positive
+            <input type="radio" name="AcceptedCmp4" id="" value="0">negative<br>
+            <label for="AcceptedCmp4">AcceptedCmp5</label>
+            <input type="radio" name="AcceptedCmp5" id="" value="1">positive
+            <input type="radio" name="AcceptedCmp5" id="" value="0">negative<br>
+            <label for="AcceptedCmp4">AcceptedCmp1</label>
+            <input type="radio" name="AcceptedCmp1" id="" value="1">positive
+            <input type="radio" name="AcceptedCmp1" id="" value="0">negative<br>
+            <label for="AcceptedCmp4">AcceptedCmp2</label>
+            <input type="radio" name="AcceptedCmp2" id="" value="1">positive
+            <input type="radio" name="AcceptedCmp2" id="" value="0">negative<br>
+            <label for="year">year</label>
+            <input type="number" name="year" id="input_num" placeholder="year" min="2012"><br>
+            <input type="submit" name="" id="" class="btn btn-large btn-primary btn-block" value="predict">
+        </form>
+        {{prediction}}
+    </div>
+</body>
+</html>
